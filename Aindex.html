@@ -1,0 +1,86 @@
+<!-- Inside index.html -->
+<form onsubmit="window.location.href='dashboard.html'; return false;">
+  <!-- Your form fields -->
+  <button type="submit">Sign Up</button>
+</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | Learn Python</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1555949963-aa79dcee9816?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-container {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffe1;
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffe1;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #00ffe1;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <input type="text" id="firstName" placeholder="First Name" required>
+    <input type="text" id="lastName" placeholder="Last Name" required>
+    <input type="date" id="birthDate" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button onclick="submitForm()">Sign Up</button>
+  </div>
+
+  <script>
+    function submitForm() {
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const birthDate = document.getElementById("birthDate").value;
+      const email = document.getElementById("email").value;
+
+      if (firstName && lastName && birthDate && email) {
+        // Save user info (can be extended to Firebase)
+        localStorage.setItem("user", JSON.stringify({ firstName, lastName, birthDate, email }));
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Please fill in all fields!");
+      }
+    }<!-- Inside index.html -->
+<form onsubmit="window.location.href='dashboard.html'; return false;">
+  <!-- Your form fields -->
+  <button type="submit">Sign Up</button>
+</form>
+  </script>
+</body>
+</html>

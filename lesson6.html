@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 6: Functions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 6: Functions</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>Functions are blocks of reusable code. They help organize code into smaller, manageable parts. In Python, you define a function using the <code>def</code> keyword.</p>
+    <p>Functions can accept parameters and return values using the <code>return</code> statement.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>def greet():</code>
+    <code>    print("Hello!")</code>
+    <code>greet()</code>
+    <code>def add(a, b):</code>
+    <code>    return a + b</code>
+    <code>result = add(5, 3)</code>
+    <code>print(result)</code>
+    <code>def square(x):</code>
+    <code>    return x * x</code>
+    <code>print(square(4))</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Write a function that prints your name.</li>
+      <li>2. Create a function that returns the sum of two numbers.</li>
+      <li>3. Write a function that checks if a number is even.</li>
+      <li>4. Create a function to reverse a string.</li>
+      <li>5. Define a function that returns the factorial of a number.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson6?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(6)) {
+        completed.push(6);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 6 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

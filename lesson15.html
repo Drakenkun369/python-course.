@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 15: Final Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 15: Final Project</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>Now that you have learned the basics of Python programming, it’s time to apply your skills in a final project. The project will be based on everything you’ve learned in the previous lessons. You will create a Python program that incorporates all the concepts: variables, loops, functions, classes, and more!</p>
+
+    <h3>1. Project Overview</h3>
+    <p>The goal of this project is to build a Python program that takes user input, processes the data, and displays the results. You will create a program that solves a real-world problem and demonstrates your understanding of Python.</p>
+
+    <h3>2. Steps to Complete the Project:</h3>
+    <ul>
+      <li>Step 1: Choose a problem to solve (e.g., a calculator, a to-do list app, a game, etc.).</li>
+      <li>Step 2: Plan your program and break it down into manageable tasks.</li>
+      <li>Step 3: Write your program using classes, functions, loops, and conditionals.</li>
+      <li>Step 4: Test your program and fix any errors.</li>
+      <li>Step 5: Add additional features and make the program interactive.</li>
+    </ul>
+
+    <h3>3. Example Final Project Ideas</h3>
+    <ul>
+      <li>A simple text-based calculator that performs arithmetic operations.</li>
+      <li>A to-do list application that allows users to add, remove, and view tasks.</li>
+      <li>A number guessing game where the computer randomly selects a number, and the user has to guess it.</li>
+      <li>A Python quiz program that quizzes the user on Python concepts and keeps track of their score.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>def calculator():</code>
+    <code>    print("Welcome to the calculator!")</code>
+    <code>    num1 = float(input("Enter first number: "))</code>
+    <code>    num2 = float(input("Enter second number: "))</code>
+    <code>    operation = input("Enter operation (+, -, *, /): ")</code>
+    <code>    if operation == '+':</code>
+    <code>        result = num1 + num2</code>
+    <code>    elif operation == '-':</code>
+    <code>        result = num1 - num2</code>
+    <code>    elif operation == '*':</code>
+    <code>        result = num1 * num2</code>
+    <code>    elif operation == '/':</code>
+    <code>        result = num1 / num2</code>
+    <code>    else:</code>
+    <code>        print("Invalid operation!")</code>
+    <code>    print(f"The result is: {result}")</code>
+
+    <code>calculator()</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Create a Python program that calculates the factorial of a number using recursion.</li>
+      <li>2. Write a Python program to generate a random password with letters, digits, and special characters.</li>
+      <li>3. Develop a Python program that reads a text file and counts the occurrences of each word.</li>
+      <li>4. Create a Python class for a library management system that handles books, users, and borrowing transactions.</li>
+      <li>5. Implement a Python program that simulates a bank account with deposit and withdrawal functionalities.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson15?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(15)) {
+        completed.push(15);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 15 marked as complete! You have finished the Python course!");
+      }
+    }
+  </script>
+</body>
+</html>

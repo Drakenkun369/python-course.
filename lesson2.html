@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 2: Variables and Data Types</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .commands, .exercises {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .commands code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 2: Variables and Data Types</h1>
+
+  <div class="content">
+    <h2>📘 Explanation</h2>
+    <p>Variables are used to store data that can be used and modified throughout your program. A variable has a name and holds a value.</p>
+    <p>Python has several data types including:</p>
+    <ul>
+      <li><strong>int</strong> - Integer values like 1, 2, 3</li>
+      <li><strong>float</strong> - Decimal values like 3.14</li>
+      <li><strong>str</strong> - Strings like "Hello"</li>
+      <li><strong>bool</strong> - Boolean values: True or False</li>
+    </ul>
+    <p>You don't need to declare a variable type in Python — it’s dynamically typed.</p>
+  </div>
+
+  <div class="commands">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>x = 10</code>
+    <code>name = "John"</code>
+    <code>price = 99.99</code>
+    <code>is_active = True</code>
+    <code>print(type(x))</code>
+    <code>y = x + 5</code>
+    <code>print("Name:", name)</code>
+    <code>a, b = 5, 6</code>
+    <code>z = str(x)</code>
+    <code>print(is_active and True)</code>
+  </div>
+
+  <div class="exercises">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Create a variable for your name and print it.</li>
+      <li>2. Store your age in a variable and add 5 to it.</li>
+      <li>3. Create a float variable and print its type.</li>
+      <li>4. Create a boolean variable for login status.</li>
+      <li>5. Swap two variables and print the results.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson2?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(2)) {
+        completed.push(2);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 2 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

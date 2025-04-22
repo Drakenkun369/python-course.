@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 4: Control Flow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .commands, .exercises {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .commands code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 4: Control Flow (if, elif, else)</h1>
+
+  <div class="content">
+    <h2>📘 Explanation</h2>
+    <p>Control flow allows you to make decisions in your code using conditions. The main statements are:</p>
+    <ul>
+      <li><strong>if</strong> - Checks a condition</li>
+      <li><strong>elif</strong> - Checks another condition if the first is False</li>
+      <li><strong>else</strong> - Runs if none of the conditions are True</li>
+    </ul>
+    <p>Indentation is important in Python; all blocks of code under if/elif/else must be indented.</p>
+  </div>
+
+  <div class="commands">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>x = 10</code>
+    <code>if x > 5:</code>
+    <code>    print("Greater than 5")</code>
+    <code>if x == 10:</code>
+    <code>    print("Exactly 10")</code>
+    <code>if x < 5:</code>
+    <code>    print("Less than 5")</code>
+    <code>elif x == 10:</code>
+    <code>    print("Equals 10")</code>
+    <code>else:</code>
+    <code>    print("Something else")</code>
+  </div>
+
+  <div class="exercises">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Check if a number is positive, negative, or zero.</li>
+      <li>2. Write a program that prints grades based on score.</li>
+      <li>3. Ask a user’s age and print if they are eligible to vote.</li>
+      <li>4. Create a program with multiple elif conditions.</li>
+      <li>5. Use nested if statements to check multiple conditions.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson4?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(4)) {
+        completed.push(4);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 4 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

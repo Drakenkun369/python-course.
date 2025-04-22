@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 11: Modules and Libraries</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 11: Modules and Libraries</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>In Python, a module is a file containing Python definitions and statements. A library is a collection of modules that provide specific functionality. Python has an extensive standard library, but you can also install third-party libraries to extend Python's capabilities.</p>
+    <p>Modules help organize your code into reusable chunks. You can create your own modules or use built-in ones like `math`, `random`, or `os`.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>import math</code>
+    <code>print(math.sqrt(16))</code>
+    <code>import random</code>
+    <code>print(random.randint(1, 100))</code>
+    <code>import os</code>
+    <code>print(os.getcwd())</code>
+    <code>import datetime</code>
+    <code>print(datetime.datetime.now())</code>
+    <code>import statistics</code>
+    <code>data = [1, 2, 3, 4, 5]</code>
+    <code>print(statistics.mean(data))</code>
+    <code>import sys</code>
+    <code>print(sys.version)</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Use the `math` module to calculate the area of a circle.</li>
+      <li>2. Use the `random` module to generate a random number between 1 and 50.</li>
+      <li>3. Create a program using the `os` module to display the current working directory.</li>
+      <li>4. Write a program to print the current date and time using the `datetime` module.</li>
+      <li>5. Use the `statistics` module to calculate the median of a list of numbers.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson11?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(11)) {
+        completed.push(11);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 11 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 13: Advanced Topics (NumPy, APIs, Web Scraping)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 13: Advanced Topics (NumPy, APIs, Web Scraping)</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>This lesson dives into advanced Python topics such as NumPy, APIs, and Web Scraping. These concepts will help you work with data analysis, interact with external services, and extract data from websites.</p>
+
+    <h3>1. NumPy</h3>
+    <p>NumPy is a powerful library used for numerical computing. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.</p>
+
+    <h3>2. APIs</h3>
+    <p>APIs (Application Programming Interfaces) allow applications to communicate with each other. Python provides several libraries such as `requests` to work with APIs, enabling you to send HTTP requests and receive data from external services.</p>
+
+    <h3>3. Web Scraping</h3>
+    <p>Web Scraping is the process of extracting data from websites. Python libraries like `BeautifulSoup` and `requests` allow you to scrape web pages and pull relevant data from them.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>import numpy as np</code>
+    <code>x = np.array([1, 2, 3, 4])</code>
+    <code>print(x)</code>
+    <code>y = np.array([[1, 2], [3, 4]])</code>
+    <code>print(np.dot(x, y))</code>
+
+    <code>import requests</code>
+    <code>response = requests.get('https://api.github.com')</code>
+    <code>print(response.json())</code>
+
+    <code>import requests</code>
+    <code>from bs4 import BeautifulSoup</code>
+    <code>url = 'https://example.com'</code>
+    <code>r = requests.get(url)</code>
+    <code>soup = BeautifulSoup(r.text, 'html.parser')</code>
+    <code>print(soup.prettify())</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Create a NumPy array of your favorite numbers and perform basic mathematical operations like addition, subtraction, and multiplication.</li>
+      <li>2. Write a Python program that fetches your favorite public API data (e.g., weather data) and displays it to the user.</li>
+      <li>3. Implement a web scraper to extract all the article titles from a blog or news website and display them in the terminal.</li>
+      <li>4. Use `requests` and `BeautifulSoup` to extract all links from a webpage.</li>
+      <li>5. Write a program that uses NumPy to compute the mean, median, and standard deviation of a dataset.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson13?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(13)) {
+        completed.push(13);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 13 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

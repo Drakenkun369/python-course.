@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 14: Object-Oriented Programming</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 14: Object-Oriented Programming</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes. In OOP, a class defines the structure and behaviors of objects, and objects are instances of a class.</p>
+
+    <h3>1. Classes and Objects</h3>
+    <p>A class defines the blueprint for an object. It contains methods (functions) and attributes (variables). An object is an instance of a class.</p>
+
+    <h3>2. Inheritance</h3>
+    <p>Inheritance allows one class (child) to inherit the properties and methods from another class (parent). This enables code reuse and hierarchical classification.</p>
+
+    <h3>3. Polymorphism</h3>
+    <p>Polymorphism allows different objects to be treated as instances of the same class through inheritance. It enables overriding of methods in the child class.</p>
+
+    <h3>4. Encapsulation</h3>
+    <p>Encapsulation restricts direct access to an object’s attributes and methods, ensuring data protection by using getters and setters.</p>
+
+    <h3>5. Abstraction</h3>
+    <p>Abstraction is the concept of hiding the complex implementation details and showing only the necessary features of an object to the user.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>class Car:</code>
+    <code>    def __init__(self, make, model):</code>
+    <code>        self.make = make</code>
+    <code>        self.model = model</code>
+    <code>    def display_info(self):</code>
+    <code>        print(f"{self.make} {self.model}")</code>
+    <code>car1 = Car('Toyota', 'Corolla')</code>
+    <code>car1.display_info()</code>
+
+    <code>class Animal:</code>
+    <code>    def sound(self):</code>
+    <code>        raise NotImplementedError("Subclass must implement abstract method")</code>
+    <code>class Dog(Animal):</code>
+    <code>    def sound(self):</code>
+    <code>        return "Bark"</code>
+    <code>dog = Dog()</code>
+    <code>print(dog.sound())</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Create a class `Student` with attributes like `name`, `age`, and `grade`. Add methods to set and get student information.</li>
+      <li>2. Implement inheritance in Python by creating a parent class `Animal` and child classes `Dog` and `Cat` with methods specific to each animal.</li>
+      <li>3. Write a Python program using polymorphism to demonstrate the use of method overriding.</li>
+      <li>4. Use encapsulation in Python by creating a class that uses private variables and public methods to access them.</li>
+      <li>5. Implement abstraction by creating an abstract class and defining methods that must be overridden in the subclass.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson14?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(14)) {
+        completed.push(14);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 14 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>

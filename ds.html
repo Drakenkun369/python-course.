@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Learn Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+    .container {
+      padding: 20px;
+    }
+    h2 {
+      color: #facc15;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lessons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .lesson {
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 2px solid #334155;
+    }
+    .lesson:hover {
+      background: #334155;
+      transform: scale(1.05);
+    }
+    .completed {
+      border: 2px solid #22c55e;
+      background: #14532d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Welcome, <span id="username">Learner</span> 👋 | Your Python Dashboard
+  </header>
+
+  <div class="container">
+    <h2>Select a Lesson</h2>
+    <div class="lessons" id="lessonList"></div>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    document.getElementById("username").innerText = user?.firstName || "Learner";
+
+    const completedLessons = JSON.parse(localStorage.getItem("completedLessons")) || [];
+
+    const lessons = Array.from({ length: 15 }, (_, i) => ({
+      title: `Lesson ${i + 1}`,
+      file: `lesson${i + 1}.html`
+    }));
+
+    const lessonList = document.getElementById("lessonList");
+    lessons.forEach((lesson, index) => {
+      const btn = document.createElement("div");
+      btn.className = "lesson";
+      if (completedLessons.includes(index + 1)) {
+        btn.classList.add("completed");
+      }
+      btn.innerText = lesson.title;
+      btn.onclick = () => {
+        window.location.href = lesson.file;
+      };
+      lessonList.appendChild(btn);
+    });
+  </script>
+</body>
+</html>

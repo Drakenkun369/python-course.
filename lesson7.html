@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 7: Lists and Tuples</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    h2 {
+      color: #facc15;
+    }
+    .section {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section code {
+      display: block;
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lesson 7: Lists and Tuples</h1>
+
+  <div class="section">
+    <h2>📘 Explanation</h2>
+    <p>In Python, lists and tuples are both used to store collections of data. The main difference is that lists are mutable (can be changed), while tuples are immutable (cannot be changed after creation).</p>
+    <p>Use lists when you need a collection that can be modified, and use tuples when you need a fixed collection.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 10 Practice Commands</h2>
+    <code>my_list = [1, 2, 3]</code>
+    <code>my_tuple = (4, 5, 6)</code>
+    <code>my_list.append(4)</code>
+    <code>print(my_list)</code>
+    <code>my_tuple[0]</code>
+    <code>my_list[1] = 7</code>
+    <code>del my_list[2]</code>
+    <code>print(len(my_list))</code>
+    <code>my_list.extend([8, 9])</code>
+    <code>my_list.insert(0, 0)</code>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Exercises</h2>
+    <ul>
+      <li>1. Create a list with 5 elements and print the second item.</li>
+      <li>2. Convert a tuple into a list and modify it.</li>
+      <li>3. Write a program to remove an item from a list.</li>
+      <li>4. Use the <code>extend()</code> method to add multiple items to a list.</li>
+      <li>5. Create a list, add a new element at the beginning, and print it.</li>
+    </ul>
+  </div>
+
+  <h2>💻 Try it Yourself</h2>
+  <iframe src="https://replit.com/@yourusername/python-lesson7?embed=true" title="Replit Embed"></iframe>
+
+  <button onclick="markComplete()">✅ Mark as Complete</button>
+
+  <script>
+    function markComplete() {
+      const completed = JSON.parse(localStorage.getItem("completedLessons")) || [];
+      if (!completed.includes(7)) {
+        completed.push(7);
+        localStorage.setItem("completedLessons", JSON.stringify(completed));
+        alert("Lesson 7 marked as complete!");
+      }
+    }
+  </script>
+</body>
+</html>
